@@ -1,0 +1,6 @@
+<% if(locals.messageOrigin || locals.messageShort) {%>
+<div class="message">
+   <% console.log("message.ejs ----", messageOrigin) %>
+   short url for <%= messageOrigin? messageOrigin:"" %> :  <%= messageShort? messageShort:"" %>
+</div>
+<% } %>

@@ -1,12 +1,17 @@
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #222;
-  background-color: #fff;
-  text-align: center;
-  line-height: 1.4em;
+:root{
+  font-size: 18px;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(37, 33, 34);
+  color:aliceblue;
+}
+body{
+  height: 100vh;
+  height: 100dvh;
+}
 main {
   padding: 0;
   margin-top: 40px;
@@ -16,12 +21,14 @@ h3 {
   margin-top: 30px;
 }
 
-.user-stories li {
-  margin-bottom: 1em;
+a,li,ul {
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
-
-a {
-  color: #2574a9;
+a{
+  
+  background-color:rgba(2, 2, 2, 0.3); 
 }
 
 form {
@@ -39,6 +46,24 @@ input {
 }
 
 input[type='text'] {
-  width: 220px;
+  width: 70%;
+  text-align: center;
+}
+.grid{
+  display: grid;
+}
+.two-col{
+  grid-template-columns: max-content auto;
+  column-gap: 1rem;
+  height: 100%;
+}
+nav{
+  font-size: 1.8rem;
+  padding: 2rem  1.5rem;
+  background-color: rgba(2, 2, 2, 0.3);
+  
+}
+header{
+  font-weight: 800;
   text-align: center;
 }

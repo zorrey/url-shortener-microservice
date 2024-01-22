@@ -1,0 +1,23 @@
+<section>
+    <form id="apiForm" action="shorturl" method="GET" >
+      <fieldset>
+        <legend>URL Shortener</legend>
+        <label for="url_input">URL:</label>
+        <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
+        <input id="apiForm-submit" type="submit" value="SEND URL" />
+      </fieldset>
+    </form>
+  </section>
+  <section>
+    <div id="result">
+        <%- include('./message.ejs') %>
+        <%- include('./error.ejs') %>
+    </div>
+  </section>
+  <section>
+    <form id="callForm" action="shorturl/:short" class="callUrl" method="POST">
+      <label for="short_input">Enter short link: </label>
+      <input id="short_input" type="text" name="short" placeholder="1.." />
+      <button type="submit">OPEN</button>
+    </form>
+  </section>      

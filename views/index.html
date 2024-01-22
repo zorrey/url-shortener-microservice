@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <title>URL Shortener Microservice | freeCodeCamp.org</title>
@@ -15,18 +14,64 @@
     <h1>URL Shortener Microservice</h1>
     <main>
       <section>
-        <form action="api/shorturl" method="POST">
+        <form id="apiForm" action="api/shorturl" method="" >
           <fieldset>
             <legend>URL Shortener</legend>
             <label for="url_input">URL:</label>
             <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
-            <input type="submit" value="POST URL" />
+            <input id="apiForm-submit" type="submit" value="SEND URL" />
           </fieldset>
         </form>
       </section>
+      <section>
+        <div id="result"></div>
+      </section>
+      <section>
+        <form id="callForm" action="api/shorturl/:short" class="callUrl" method="POST">
+          <label for="short_input">Enter short link: </label>
+          <input id="short_input" type="text" name="short" placeholder="1.." />
+          <button type="submit">OPEN</button>
+        </form>
+      </section>      
     </main>
     <footer>
       <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
     </footer>
+    <script>
+      let result = document.getElementById('result');
+      let apiForm = document.querySelector('#apiForm');
+      let callForm = document.querySelector('#callForm');
+      let apiFormSubmit = document.querySelector('#apiForm-submit');
+      const urlInput = document.querySelector('#url_input');
+      const shortInput = document.querySelector('#short_input');
+      apiForm.addEventListener( 'submit', dataFetch );
+      //callForm.addEventListener( 'submit', messageFetch );
+
+     async function dataFetch (e){
+      e.preventDefault();
+      let newurl= urlInput.value;
+
+        const data = await fetch("api/shorturl" + `?url=${newurl}`)
+      
+      const parsed = await data.json();
+
+      let shortlink =parsed.short;
+      console.log( 'parsed-->', parsed )
+      result.textContent= `Short link: ${shortlink} `;
+      }    
+   /*   async function messageFetch (e){
+      e.preventDefault();
+      let newurl= shortInput.value;
+
+      const data = await fetch("api/shorturl/" + `${newurl}/message`)
+      
+      const parsed = await data.json();
+
+      let error =parsed.error;
+      console.log( 'parsed-short-->', parsed )
+      result.textContent= `Error: ${error} `;
+      }   */  
+
+    </script>
   </body>
 </html>
