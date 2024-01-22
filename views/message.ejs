@@ -1,6 +1,16 @@
 <% if(locals.messageOrigin || locals.messageShort) {%>
-<div class="message">
-   <% console.log("message.ejs ----", messageOrigin) %>
-   short url for <%= messageOrigin? messageOrigin:"" %> :  <%= messageShort? messageShort:"" %>
-</div>
-<% } %>
+
+   <div class="row message">url to enter in address bar : &nbsp 
+      <a id="afull" href=""><span class="full-link"></span>
+         <span  class="shortMessage">/<%= messageShort? messageShort:"" %></span>
+      </a> 
+   </div>
+   <div class="row message"> short url for the form below : &nbsp <span class="shortMessage">
+         <%= messageShort? messageShort:"" %>
+      </span> 
+   </div>
+
+   <% } %>
+      <script>
+             
+      </script>

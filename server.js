@@ -29,7 +29,7 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 }); */
 app.use('/', route);
-
+console.log('process.cwd()-----',process.cwd())
 app.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });

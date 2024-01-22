@@ -23,18 +23,34 @@
             <%- body %>
         </main>
     </div>
-
     <footer>
-
     </footer>
     <script>
         const error = document.querySelector('.error');
+        const short = document.querySelector('shortMessage')
         if (error) {
             setTimeout(function () {
                 console.log("asign", error)
                 window.location.assign('/')
             }, 3000)
         }
+//-------------------------------------------------------------------------
+        const link = document.querySelector('.full-link');
+         const afull = document.querySelector('#afull');
+         
+            if (link) {
+               // const pagelocation =  window.location.href;
+
+               if (!window.location.href) {
+                  window.location.assign('/');
+               } else {
+                  const pagelocation = (window.location.href).split('?')
+                  console.log(pagelocation)
+                  link.textContent = pagelocation[0];
+                  afull.href = pagelocation[0] +"/" + "<%= messageShort %>";
+               }
+            } 
+
     </script>
 </body>
 
