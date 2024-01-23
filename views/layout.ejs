@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener Microservice</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-
     <!-- <script defer src="../public/controller.js"></script> -->
 </head>
-
 <body>
     <div class="grid two-col">
         <nav>
@@ -28,10 +25,10 @@
         <div class="links">
             <a href="https://www.freecodecamp.org/"><img id="fcc" alt="FCC"
                     src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">
-               <span class="fcc"> FCC Project - Back End Development and APIs Projects</span>
-            </a>
+             </a>  
+             <span class="fcc">Back End Development and APIs Certification Project</span>
+            
         </div>
-
     </footer>
     <script>
         const error = document.querySelector('.error');
@@ -45,7 +42,6 @@
         //-------------------------------------------------------------------------
         const link = document.querySelector('.full-link');
         const afull = document.querySelector('#afull');
-
         if (link) {
             // const pagelocation =  window.location.href;
 
@@ -58,8 +54,6 @@
                 afull.href = pagelocation[0] + "/" + "<%= messageShort %>";
             }
         }
-
     </script>
 </body>
-
 </html>

@@ -45,7 +45,6 @@ footer{
   background-color: rgb(37, 33, 34);
   color: aliceblue;
 }
-
 body {
   height: 100vh;
   height: 100dvh;
@@ -68,28 +67,18 @@ header {
   text-align: center;
 }
 a {
-
   background-color: rgba(2, 2, 2, 0.3);
 }
-li {
-
-  background-color: rgba(2, 2, 2, 0.3);
-}
-
 .form{
   justify-content: space-between;
   align-items: center;
 }
-
-
 nav {
   font-size: 1.8rem;
   padding: 4rem 1.5rem;
   background-color: rgba(2, 2, 2, 0.3);
 
 }
-
-
 .row {
   display: flex;
   flex-direction: row; 
@@ -102,7 +91,6 @@ width: 25%;
 padding: 0.3rem 1rem;
 font-size: 1.4rem;
 }
-
 button {
   background-color: rgb(139, 135, 134);
   color: black;
@@ -112,30 +100,28 @@ button {
   text-align: center;
   line-height: 2rem;
 }
-
 .message{
   margin-top: 1rem;
 }
 footer{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: rgba(2, 2, 2, 0.3);
   height: 2rem;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
   width: 100dvw;
+  line-height: 2rem;
 }
 #fcc{
   background-color: white;
-  width:120px;
-  z-index: 0;
+  width:144px;
   padding: 0.2rem;
 }
 .column{
   display: flex;
   flex-direction: column;
   padding: 1rem;
+}
+.links, .links>span{
+  background-color: rgba(2, 2, 2, 0.3);
 }
