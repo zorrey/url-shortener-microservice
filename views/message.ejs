@@ -1,16 +1,20 @@
 <% if(locals.messageOrigin || locals.messageShort) {%>
 
-   <div class="row message">url to enter in address bar : &nbsp 
-      <a id="afull" href=""><span class="full-link"></span>
-         <span  class="shortMessage">/<%= messageShort? messageShort:"" %></span>
-      </a> 
+   <div class="column border">
+      <div class="row">Open the original url with: </div>
+      <div class="row message">Short url for address bar : &nbsp
+         <a id="afull" href=""><span class="full-link"></span>
+            
+         </a>
+      </div>
+      <div class="row message"> Index url for the form below : &nbsp <span class="shortMessage">
+            <%= messageShort? messageShort:"" %>
+         </span>
+      </div>
    </div>
-   <div class="row message"> short url for the form below : &nbsp <span class="shortMessage">
-         <%= messageShort? messageShort:"" %>
-      </span> 
-   </div>
+
 
    <% } %>
       <script>
-             
+
       </script>
