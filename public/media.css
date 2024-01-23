@@ -10,8 +10,7 @@
       section {
         margin: 1rem auto;
         font-size: 1.3rem;
-      }
-      
+      }      
       .form{
         justify-content: center;
         align-items: center;
@@ -31,16 +30,24 @@
       .grid {
         display: flex;
         flex-direction: column;
-      }
-      
+      }      
       .two-col {
         height: 100%;
-      }
-      
+      }      
       nav {
         font-size: 1.8rem;
         padding: 2rem 1.5rem;
+        background-color: rgba(2, 2, 2, 0.3);      
+      }
+      footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         background-color: rgba(2, 2, 2, 0.3);
-      
+        height: 4rem;
+      }
+      .fcc{
+        display: none;
       }
 }

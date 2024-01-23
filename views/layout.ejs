@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener Microservice</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  
+
     <!-- <script defer src="../public/controller.js"></script> -->
 </head>
 
@@ -25,11 +25,13 @@
         </main>
     </div>
     <footer>
-        <div class="links"><a class="author" href="https://codepen.io/Zory">Zory St</a>
-            <a href="https://www.freecodecamp.org/"><img id="fcc" alt="FCC" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">  
-        FCC Project - Back End Development and APIs Projects</a> 
+        <div class="links">
+            <a href="https://www.freecodecamp.org/"><img id="fcc" alt="FCC"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">
+               <span class="fcc"> FCC Project - Back End Development and APIs Projects</span>
+            </a>
         </div>
-       
+
     </footer>
     <script>
         const error = document.querySelector('.error');
@@ -40,22 +42,22 @@
                 window.location.assign('/')
             }, 3000)
         }
-//-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
         const link = document.querySelector('.full-link');
-         const afull = document.querySelector('#afull');
-         
-            if (link) {
-               // const pagelocation =  window.location.href;
+        const afull = document.querySelector('#afull');
 
-               if (!window.location.href) {
-                  window.location.assign('/');
-               } else {
-                  const pagelocation = (window.location.href).split('?')
-                  console.log(pagelocation)
-                  link.textContent = pagelocation[0] +"/" + "<%= messageShort %>";
-                  afull.href = pagelocation[0] +"/" + "<%= messageShort %>";
-               }
-            } 
+        if (link) {
+            // const pagelocation =  window.location.href;
+
+            if (!window.location.href) {
+                window.location.assign('/');
+            } else {
+                const pagelocation = (window.location.href).split('?')
+                console.log(pagelocation)
+                link.textContent = pagelocation[0] + "/" + "<%= messageShort %>";
+                afull.href = pagelocation[0] + "/" + "<%= messageShort %>";
+            }
+        }
 
     </script>
 </body>
